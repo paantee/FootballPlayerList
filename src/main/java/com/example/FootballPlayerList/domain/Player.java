@@ -18,18 +18,19 @@ public class Player {
 	private int age;
 
 	@ManyToOne
-	@JoinColumn(name="categoryid")
+	@JoinColumn(name="positionid")
 	private Position position;
 	
 	public Player() {
 		
 	}
 	
-	public Player(String name, String country, int age) {
+	public Player(String name, String country, int age, Position position) {
 		super();
 		this.name = name;
 		this.country = country;
 		this.age = age;
+		this.position = position;
 	}
 
 	public Long getId() {
@@ -55,6 +56,14 @@ public class Player {
 	}
 	public void setAge(int age) {
 		this.age = age;
+	}
+
+	public Position getPosition() {
+		return position;
+	}
+
+	public void setPosition(Position position) {
+		this.position = position;
 	}
 	
 	

@@ -24,6 +24,11 @@ public class PlayerController {
 	@Autowired
 	private PositionRepository prepository;
 	
+    @RequestMapping(value="/login")
+    public String login() {	
+        return "login";
+    }
+	
 	// Shows the player list
 @RequestMapping(value = {"/", "/playerlist"}, method = RequestMethod.GET)
 public String PlayerList(Model model) {
