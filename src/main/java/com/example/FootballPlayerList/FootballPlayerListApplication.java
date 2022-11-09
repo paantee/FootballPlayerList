@@ -20,7 +20,7 @@ public class FootballPlayerListApplication {
 	}
 	
 	@Bean
-	public CommandLineRunner demo(PlayerRepository repository, PositionRepository prepository) {return (args) -> {
+	public CommandLineRunner demo(PlayerRepository repository, PositionRepository prepository, UserRepository urepository) {return (args) -> {
 		
 		prepository.save(new Position("Center Forward"));
 		prepository.save(new Position("Left Wing"));
@@ -29,7 +29,10 @@ public class FootballPlayerListApplication {
 		repository.save(new Player("Lionel Messi", "Argentina", 35, prepository.findByName("Center Forward").get(0)));
 
 
-
+	User user1 = new User("user", "$2a$06$3jYRJrg0ghaaypjZ/.g4SethoeA51ph3UD4kZi9oPkeMTpjKU5uo6", "USER");
+	User user2 = new User("admin", "$2a$10$0MMwY.IQqpsVc1jC8u7IJ.2rT8b0Cd3b3sfIBGV2zfgnPGtT4r0.C", "ADMIN");
+	urepository.save(user1);
+	urepository.save(user2); 
 		
 	};
 	}
