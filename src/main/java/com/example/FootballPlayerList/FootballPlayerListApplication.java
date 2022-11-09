@@ -25,6 +25,13 @@ public class FootballPlayerListApplication {
 		prepository.save(new Position("Center Forward"));
 		prepository.save(new Position("Left Wing"));
 		prepository.save(new Position("Right Wing"));
+		prepository.save(new Position("Center Midfield"));
+		prepository.save(new Position("Center Defensive Midfield"));
+		prepository.save(new Position("Center Attacking Midfield"));
+		prepository.save(new Position("Left Back"));
+		prepository.save(new Position("Right Back"));
+		prepository.save(new Position("Center Back"));
+		prepository.save(new Position("Goalkeeper"));
 				
 		repository.save(new Player("Lionel Messi", "Argentina", 35, prepository.findByName("Center Forward").get(0)));
 
