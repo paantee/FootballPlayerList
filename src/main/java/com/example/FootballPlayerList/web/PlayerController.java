@@ -24,7 +24,7 @@ public class PlayerController {
 	@Autowired
 	private PositionRepository prepository;
 	
-    @RequestMapping(value="/login")
+    @RequestMapping(value="login")
     public String login() {	
         return "login";
     }

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import com.example.FootballPlayerList.domain.User;
 import com.example.FootballPlayerList.domain.UserRepository;
 
-
+/** This class is to authenticate users**/
 
 @Service
 public class UserDetailServiceImpl implements UserDetailsService {
