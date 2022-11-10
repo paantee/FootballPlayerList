@@ -26,6 +26,8 @@
 				<th></th>
 				<th>Age</th>
 				<th></th>
+				<th>Club</th>	
+				<th></th>
 				<th>Position</th>	
 				<th></th>
 				<th sec:authorize="hasAuthority('ADMIN')"></th>
@@ -37,6 +39,7 @@
               	<td th:text="${player.name}"><td/>
               	<td th:text="${player.country}"><td/>
               	<td th:text="${player.age}"><td/>
+              	<td th:text="${player.club}"><td/>
               	<td th:text="${player.position.name}"><td/>
               		<td sec:authorize="hasAuthority('ADMIN')"><a th:href="@{/edit/{id}(id=${player.id})}">Edit</a></td>
               		<td sec:authorize="hasAuthority('ADMIN')"><a th:href="@{/delete/{id}(id=${player.id})}">Delete</a></td>

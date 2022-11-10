@@ -36,7 +36,7 @@ public class FootballPlayerListApplication {
 		prepository.save(new Position("Center Back"));
 		prepository.save(new Position("Goalkeeper"));
 				
-		repository.save(new Player("Lionel Messi", "Argentina", 35, prepository.findByName("Center Forward").get(0)));
+		repository.save(new Player("Lionel Messi", "Argentina", 35, prepository.findByName("Center Forward").get(0), "PSG"));
 
 
 	User user1 = new User("user", "$2a$06$3jYRJrg0ghaaypjZ/.g4SethoeA51ph3UD4kZi9oPkeMTpjKU5uo6", "USER");
